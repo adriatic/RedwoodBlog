@@ -10,9 +10,18 @@ This repo contains much more styling than the one we built together in the tutor
 The [tutorial itself](https://redwoodjs.com/docs/tutorial/chapter1/prerequisites) contains instructions for getting this repo up and running, but here is a summary of the commands:
 
 ```bash
-git clone https://github.com/redwoodjs/redwood-tutorial
+git clone https://github.com/adriatic/redwoodblog
 cd redwood-tutorial
 yarn install
 yarn rw prisma migrate dev
+yarn rw prisma db seed
+yarn rw g secret
 yarn rw dev
 ```
+
+After that last command (`yarn rw g secret`) you'll need to copy the string that's output and add it to a file .env in the root of your project:
+
+```
+.env
+---
+SESSION_SECRET=
